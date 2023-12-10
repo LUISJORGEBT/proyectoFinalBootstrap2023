@@ -1,9 +1,10 @@
 footer {
+    /*background-image: url("https://pixabay.com/es/photos/paisaje-de-invierno-%C3%A1rboles-nieve-2571788/") !important;*/
     background-image: url(imagenes/winter-landscape-2571788_1920.jpg) !important;
     background-position: center center !important;
     background-repeat: no-repeat;
     background-size: cover !important;
-    //*background-attachment: fixed !important;*/
+    background-attachment: fixed !important;
 }
 a {
     text-decoration: none !important;
