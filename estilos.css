@@ -83,10 +83,14 @@ i {
         width: 0;
         height: 0px;
     }
-}
-/*media dispositivo movil*/
-@media screen and (max-width: 550px) {
-    
+    .content {
+        border: 2px solid #fafafa10;
+        font-size: medium;
+        text-align: center!important;
+        background: #fafafa10;
+        backdrop-filter: blur(0.4rem);
+        -webkit-backdrop-filter: blur(0.4rem);
+    }
 }
 
 /* ----------- */
