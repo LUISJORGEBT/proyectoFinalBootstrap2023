@@ -90,6 +90,7 @@ i {
         background: #fafafa10;
         backdrop-filter: blur(0.4rem);
         -webkit-backdrop-filter: blur(0.4rem);
+        width: 300px!important;
     }
 }
 
