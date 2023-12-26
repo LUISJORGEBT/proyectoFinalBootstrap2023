@@ -52,7 +52,7 @@ i {
 .containerFoto {
     position: relative;
     left: 0;
-    width: 90%;
+    width: 80%;
     height: 80vh;
     padding:100px;
     background-color: #b9b1b1;
@@ -176,4 +176,10 @@ i {
     transition: 0.5s;
 }.buttons button:hover{
     background-color: #cf1616;
+}
+/* modal*/
+#moda div {
+    background-position: center!important;
+    background-attachment: fixed !important;
+    height: 300px !important;
 }

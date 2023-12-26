@@ -1,0 +1,82 @@
+#bodyArbol {
+    height: 100vh;
+    height: 100svh;
+    display: grid;
+    perspective: 150vmin;
+    overflow: hidden;
+    background: radial-gradient(circle, hsl(203 50% 2%), hsl(203 50% 10%));
+    font-family: system-ui, sans-serif;
+    font-size: 3.6vmin;
+}
+
+#arbol{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#arbol ul {
+    list-style: none;
+    display: grid;
+    margin: auto;
+    animation: display-case 10000ms infinite linear;
+    animation-play-state: paused;
+    transform-style: preserve-3d;
+    place-items: center;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    #arbol   ul {animation-play-state: running;}
+}
+
+#arbol li {
+    width: 2vmin;
+    height: 2vmin;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    border: 0.85vmin double currentColor;
+    border-width: 0;
+    color: hsl(var(--hue, 343), 99%, 50%);
+    width: 4vmin;
+    height: 4vmin;
+    border-radius: 50%;
+    transform: translateY(var(--y)) rotateY(var(--r)) translateX(var(--x))
+    scale(var(--s));
+    transform-style: preserve-3d;
+    display: grid;
+    place-items: center;
+}
+#arbol li:nth-of-type(even) {
+    color: hsl(153 70% 50%);
+    color: hsl(calc(133 + mod(var(--hue), 40)) 50% 34%);
+}
+@keyframes display-case {
+    to {transform: rotateY(1turn);}
+}
+#arbol aside {
+    position: absolute;
+    z-index: -1;
+    margin: auto;
+    inset: 0;
+    content: "";
+    filter: blur(6vmin);
+    height: 70vmin;
+    width: 35vmin;
+    transform: translateY(5vmin) translateZ(-10vmin);
+}
+aside div {
+    position: absolute;
+    inset: 0vmin 7vmin;
+    background: hsl(133 80% 40%);
+    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+    opacity: 0.9;
+    animation: pulse 6677ms infinite alternate ease-in-out;
+}
+@keyframes pulse {
+    to {opacity: 0.2;}
+}
+
+/* Valores mínimos y máximos de viewport units: vmin & vmax
+    las unidades vmin y vmax, obtenemos el valor porcentual 
+    mínimo o máximo de 
+    la ventana gráfica, ya sea en altura o anchura*/
